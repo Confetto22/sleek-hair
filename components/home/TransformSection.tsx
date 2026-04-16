@@ -2,6 +2,7 @@ import React from "react";
 import { Sparkles, Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export const TransformSection = () => {
   return (
@@ -42,9 +43,12 @@ export const TransformSection = () => {
             </span>
           </div>
         </div>
-        <Button className="rounded-full bg-[#D4A574] hover:bg-[#C4956A] text-white px-8 py-6 text-lg h-14">
+        <Link
+          href={"/products"}
+          className="rounded-full bg-[#D4A574] hover:bg-[#C4956A] text-white px-8 py-3 text-lg"
+        >
           View Collection
-        </Button>
+        </Link>
       </div>
       <div className="flex min-w-72 max-w-md grow shrink-0 basis-0 items-center justify-center relative lg:col-span-2">
         <div className="relative  w-full min-w-0 grow shrink-0 basis-0 aspect-7/8 lg:aspect-9/12 md:flex-none rounded-3xl overflow-hidden">

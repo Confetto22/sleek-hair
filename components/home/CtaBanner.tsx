@@ -1,5 +1,6 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export const CtaBanner = () => {
   return (
@@ -11,12 +12,12 @@ export const CtaBanner = () => {
         Discover our curated collection of premium human hair wigs, crafted for
         confidence and natural beauty.
       </p>
-      <Button 
-        variant="outline" 
-        className="rounded-full border-white text-white bg-transparent hover:bg-[#ffffff1a] hover:text-white h-12 px-8 text-base border-2"
+      <Link
+        href={"/products"}
+        className="rounded-full border-white text-white bg-transparent hover:bg-[#ffffff1a] hover:text-white py-3 px-8 text-base border-2"
       >
         Shop the Collection
-      </Button>
+      </Link>
     </section>
   );
 };

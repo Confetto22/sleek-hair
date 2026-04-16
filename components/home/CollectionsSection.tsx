@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const collections = [
   { id: 1, name: "Human Hair" },
@@ -21,18 +22,19 @@ export const CollectionsSection = () => {
             key={collection.id}
             className="flex flex-col items-center gap-4 max-w-md mx-auto w-full rounded-3xl bg-white p-4   shadow-sm"
           >
-            <div className="relative aspect-square w-full  flex-none rounded-2xl overflow-hidden">
+            <div className="relative aspect-square lg:aspect-5/6 w-full  flex-none rounded-2xl overflow-hidden">
               <div className="w-full h-full bg-gray-200" />
             </div>
             <h3 className="font-sans text-lg font-bold leading-1 text-[#3d2b1f] text-center">
               {collection.name}
             </h3>
-            <Button
-              variant="link"
-              className="text-[#d4a574]  hover:text-[#c4956a] px-0"
+            <Link
+              href={`/products?collection=${collection.name}`}
+              className="text-[#d4a574] group flex items-center hover:opacity-70 cursor-pointer hover:text-[#c4956a] px-0"
             >
-              Explore <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+              Explore{" "}
+              <ArrowRight className="ml-0 group-hover:ml-1 transition-all duration-300 w-4 h-4" />
+            </Link>
           </div>
         ))}
       </div>

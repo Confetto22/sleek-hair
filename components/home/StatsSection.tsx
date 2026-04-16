@@ -30,19 +30,17 @@ export const StatsSection = () => {
       </h2>
       <div className="flex w-full flex-col flex-nowrap gap-6 items-stretch justify-center md:flex-row md:flex-wrap">
         {stats.map((stat) => (
-          <div key={stat.id} className="flex min-w-48 grow shrink-0 basis-0 flex-col items-start gap-4 rounded-3xl bg-[#f5ede4] px-8 py-8">
+          <div
+            key={stat.id}
+            className="flex min-w-48 grow shrink-0 basis-0 flex-col items-start gap-4 rounded-3xl bg-[#f5ede4] px-8 py-8"
+          >
             <div className="flex w-full items-center justify-between">
               <span className="font-sans text-4xl font-bold text-[#d4a574]">
                 {stat.value}
               </span>
-              <div className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-white">
-                <ArrowUpRight className="w-4 h-4 text-[#d4a574]" />
-              </div>
             </div>
             <span className="font-semibold text-[#3d2b1f]">{stat.title}</span>
-            <span className="text-xs text-[#8b7b6b]">
-              {stat.description}
-            </span>
+            <span className="text-xs text-[#8b7b6b]">{stat.description}</span>
             <div className="relative h-32 w-full flex-none rounded-2xl overflow-hidden">
               <div className="w-full h-full bg-gray-200" />
             </div>
