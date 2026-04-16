@@ -6,20 +6,20 @@ import { Button } from '@/components/ui/button';
 export const Navbar = () => {
   return (
     <nav className="flex w-full items-center justify-between px-4 py-4 md:px-16 md:py-6 bg-[#faf5ef] sticky top-0 z-50">
-      <Link href="#" className="font-sans text-2xl font-bold text-[#3d2b1f]">
+      <Link href="/" className="font-sans text-2xl font-bold text-[#3d2b1f]">
         LUXE CROWN
       </Link>
       <div className="hidden md:flex items-center gap-8">
-        <Link href="#" className="text-sm text-[#3d2b1f] uppercase tracking-widest hover:text-[#d4a574] transition-colors">
+        <Link href="/" className="text-sm text-[#3d2b1f] uppercase tracking-widest hover:text-[#d4a574] transition-colors">
           Shop
         </Link>
-        <Link href="#" className="text-sm text-[#3d2b1f] uppercase tracking-widest hover:text-[#d4a574] transition-colors">
+        <Link href="/" className="text-sm text-[#3d2b1f] uppercase tracking-widest hover:text-[#d4a574] transition-colors">
           Collections
         </Link>
-        <Link href="#" className="text-sm text-[#3d2b1f] uppercase tracking-widest hover:text-[#d4a574] transition-colors">
+        <Link href="/" className="text-sm text-[#3d2b1f] uppercase tracking-widest hover:text-[#d4a574] transition-colors">
           Best Sellers
         </Link>
-        <Link href="#" className="text-sm text-[#3d2b1f] uppercase tracking-widest hover:text-[#d4a574] transition-colors">
+        <Link href="/" className="text-sm text-[#3d2b1f] uppercase tracking-widest hover:text-[#d4a574] transition-colors">
           About
         </Link>
       </div>
@@ -30,12 +30,16 @@ export const Navbar = () => {
         <Button variant="link" className="hidden md:flex text-[#3d2b1f] hover:text-[#d4a574] px-0">
           Sign In
         </Button>
-        <Button variant="ghost" size="icon" className="text-[#3d2b1f] hover:text-[#d4a574]">
-          <ShoppingBag className="w-5 h-5" />
-        </Button>
-        <Button className="hidden md:inline-flex rounded-full bg-[#D4A574] hover:bg-[#C4956A] text-white">
-          Shop Now
-        </Button>
+        <Link href="/cart">
+          <Button variant="ghost" size="icon" className="text-[#3d2b1f] hover:text-[#d4a574]">
+            <ShoppingBag className="w-5 h-5" />
+          </Button>
+        </Link>
+        <Link href="/">
+          <Button className="hidden md:inline-flex rounded-full bg-[#D4A574] hover:bg-[#C4956A] text-white">
+            Shop Now
+          </Button>
+        </Link>
         <Button variant="ghost" size="icon" className="md:hidden flex text-[#3d2b1f] hover:text-[#d4a574]">
           <Menu className="w-5 h-5" />
         </Button>
