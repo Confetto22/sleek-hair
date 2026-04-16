@@ -1,12 +1,44 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ProductCard, Product } from "@/components/products/ProductCard";
 
-const bestSellers = [
-  { id: 1, name: "Brazilian Body Wave", price: "$249" },
-  { id: 2, name: "Silky Straight HD Lace", price: "$349" },
-  { id: 3, name: "Deep Wave Frontal", price: "$289" },
-  { id: 4, name: "Loose Curl Closure", price: "$189" },
+const bestSellers: Product[] = [
+  { 
+    id: "1", 
+    name: "Brazilian Body Wave", 
+    price: 249,
+    specs: "18\" · 180% Density · HD Lace",
+    rating: 4.8,
+    reviews: 124,
+    badge: "Best Seller"
+  },
+  { 
+    id: "2", 
+    name: "Silky Straight HD Lace", 
+    price: 349,
+    originalPrice: 399,
+    specs: "20\" · 150% Density · HD Lace",
+    rating: 4.9,
+    reviews: 86
+  },
+  { 
+    id: "3", 
+    name: "Deep Wave Frontal", 
+    price: 289,
+    specs: "16\" · 150% Density · Frontal",
+    rating: 4.7,
+    reviews: 210
+  },
+  { 
+    id: "4", 
+    name: "Loose Curl Closure", 
+    price: 189,
+    originalPrice: 220,
+    specs: "14\" · 150% Density · Closure",
+    rating: 4.6,
+    reviews: 64
+  },
 ];
 
 export const BestSellersSection = () => {
@@ -23,25 +55,9 @@ export const BestSellersSection = () => {
           View All <ArrowRight className="ml-2 w-4 h-4" />
         </Button>
       </div>
-      <div className="w-full grid grid-cols-1 gap-4  lg:grid-cols-4 md:gap-6 place-content-start place-items-start">
+      <div className="w-full grid grid-cols-1 gap-4 lg:grid-cols-4 md:gap-6 place-content-start place-items-start">
         {bestSellers.map((product) => (
-          <div
-            key={product.id}
-            className="flex flex-col place-self-start items-start gap-4 max-w-md mx-auto w-full rounded-3xl bg-white p-4 shadow-sm"
-          >
-            <div className="relative aspect-square w-full flex-none rounded-2xl overflow-hidden">
-              <div className="w-full h-full bg-gray-200" />
-            </div>
-            <span className="font-semibold text-[#3d2b1f] px-1 md:px-2 line-clamp-1">
-              {product.name}
-            </span>
-            <span className="font-sans text-lg md:text-xl font-bold leading-6 text-[#d4a574] px-1 md:px-2">
-              {product.price}
-            </span>
-            <Button className="h-9 px-4 w-full max-w-[90%] mx-auto flex-none rounded-full bg-[#f5ede4] text-[#3d2b1f] hover:bg-[#e8d5c4] shadow-none">
-              Add to Cart
-            </Button>
-          </div>
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </section>
