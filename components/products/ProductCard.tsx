@@ -13,7 +13,7 @@ export interface Product {
   badge?: "New" | string;
 }
 
-export const ProductCard = ({ product }: { product: Product }) => {
+export const ProductCard = ({ product, actionLabel = "Add to Cart" }: { product: Product, actionLabel?: string }) => {
   return (
     <div className="flex flex-col items-start overflow-hidden rounded-2xl bg-white hover:shadow-md transition-shadow group max-w-md mx-auto w-full">
       {/* Image Container */}
@@ -71,7 +71,7 @@ export const ProductCard = ({ product }: { product: Product }) => {
         {/* CTA Button */}
         <Button className="h-9 w-full rounded-full bg-[#6B3A2A] hover:bg-[#5a2f22] text-white mt-auto flex items-center justify-center gap-2 transition-all shadow-none">
           <ShoppingBag className="w-4 h-4" />
-          Add to Cart
+          {actionLabel}
         </Button>
       </div>
     </div>

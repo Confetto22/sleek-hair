@@ -2,7 +2,7 @@ import React from "react";
 import { Search, X, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const ProductHero = () => {
+export const SearchHero = () => {
   return (
     <div className="flex w-full max-w-7xl flex-col items-center gap-6 px-4 py-6 md:px-16 md:py-10 mx-auto">
       <h1 className="font-sans text-2xl font-semibold leading-8 text-[#3d2b1f] text-center md:text-[32px] md:leading-[40px]">
