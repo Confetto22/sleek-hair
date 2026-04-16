@@ -34,7 +34,7 @@ export const Navbar = () => {
             Collection
           </Link>
           <Link
-            href="/products"
+            href="/coming-soon"
             className="text-sm text-[#3d2b1f]  tracking-widest hover:text-[#d4a574] transition-colors"
           >
             Track orders

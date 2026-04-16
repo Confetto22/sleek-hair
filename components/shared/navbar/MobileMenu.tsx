@@ -165,7 +165,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
             </Link>
 
             <Link
-              href="/orders"
+              href="/coming-soon"
               onClick={onClose}
               className="flex w-full items-center gap-3 py-3.5 group"
             >
