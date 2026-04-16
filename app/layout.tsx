@@ -18,9 +18,9 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Luxe Crown — Premium Human Hair Wigs",
+  title: "Vee Hair — Premium Human Hair Wigs",
   description:
-    "Discover LUXE CROWN's curated collection of premium human hair wigs — HD lace frontals, closures and custom units crafted for confidence and natural beauty.",
+    "Discover Vee Hair's curated collection of premium human hair wigs — HD lace frontals, closures and custom units crafted for confidence and natural beauty.",
 };
 
 export default function RootLayout({
@@ -37,4 +37,3 @@ export default function RootLayout({
     </html>
   );
 }
-
