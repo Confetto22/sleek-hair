@@ -8,7 +8,7 @@ export default function CollectionPage() {
     <div className="flex min-h-screen w-full flex-col items-center bg-[#faf5ef] font-['Inter']">
       <main className="flex flex-col w-full items-center">
         <CollectionHero />
-        <ProductLayout />
+        <ProductLayout sidebarType="collection" />
       </main>
       <CollectionFeatures />
     </div>
