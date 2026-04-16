@@ -23,27 +23,21 @@ export const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           <Link
             href="/search"
-            className="text-sm text-[#3d2b1f] uppercase tracking-widest hover:text-[#d4a574] transition-colors"
+            className="text-sm text-[#3d2b1f]  tracking-widest hover:text-[#d4a574] transition-colors"
           >
             Shop
           </Link>
           <Link
             href="/products"
-            className="text-sm text-[#3d2b1f] uppercase tracking-widest hover:text-[#d4a574] transition-colors"
+            className="text-sm text-[#3d2b1f]  tracking-widest hover:text-[#d4a574] transition-colors"
           >
-            Collections
+            Collection
           </Link>
           <Link
-            href="/"
-            className="text-sm text-[#3d2b1f] uppercase tracking-widest hover:text-[#d4a574] transition-colors"
+            href="/products"
+            className="text-sm text-[#3d2b1f]  tracking-widest hover:text-[#d4a574] transition-colors"
           >
-            Best Sellers
-          </Link>
-          <Link
-            href="/"
-            className="text-sm text-[#3d2b1f] uppercase tracking-widest hover:text-[#d4a574] transition-colors"
-          >
-            About
+            Track orders
           </Link>
         </div>
 

@@ -22,22 +22,6 @@ interface MobileMenuProps {
   cartCount?: number;
 }
 
-const SHOP_ITEMS = [
-  { label: "Wigs", href: "/products?category=wigs", active: true },
-  { label: "Bundles", href: "/products?category=bundles", active: false },
-  {
-    label: "Closures & Frontals",
-    href: "/products?category=closures",
-    active: false,
-  },
-  {
-    label: "Ready-to-Wear",
-    href: "/products?category=ready-to-wear",
-    active: false,
-  },
-  { label: "Custom Orders", href: "/custom", active: false },
-];
-
 export const MobileMenu: React.FC<MobileMenuProps> = ({
   isOpen,
   onClose,
@@ -141,60 +125,16 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
               </span>
             </Link>
 
-            {/* Shop — expandable */}
-            <div className="flex w-full flex-col items-start border-b border-[#f5ede4]">
-              <button
-                onClick={() => setShopOpen((prev) => !prev)}
-                className="flex w-full items-center justify-between py-4 group"
-                aria-expanded={shopOpen}
-              >
-                <span className="font-['DM_Sans',sans-serif] text-[22px] font-[400] leading-[30px] text-[#3d2b1f] group-hover:text-[#6b3a2a] transition-colors duration-150">
-                  Shop
-                </span>
-                <ChevronDown
-                  className={`
-                    w-[18px] h-[18px] text-[#8b7b6b]
-                    transition-transform duration-300
-                    ${shopOpen ? "rotate-180" : "rotate-0"}
-                  `}
-                />
-              </button>
-
-              {/* Shop sub-items */}
-              <div
-                className={`
-                  w-full overflow-hidden
-                  transition-all duration-300 ease-in-out
-                  ${shopOpen ? "max-h-80 opacity-100 mb-3" : "max-h-0 opacity-0 mb-0"}
-                `}
-              >
-                <div className="flex w-full flex-col items-start  bg-[#f5ede4]">
-                  {SHOP_ITEMS.map((item) => (
-                    <Link
-                      key={item.label}
-                      href={item.href}
-                      onClick={onClose}
-                      className={`
-                        flex w-full items-center px-4 py-3
-                        border-l-2 border-solid
-                        ${item.active ? "border-[#d4a574]" : "border-transparent hover:border-[#d4a574]/50"}
-                        transition-colors duration-150 group
-                      `}
-                    >
-                      <span
-                        className={`
-                          font-['DM_Sans',sans-serif] text-[16px] leading-[24px]
-                          ${item.active ? "font-[500] text-[#6b3a2a]" : "font-[400] text-[#3d2b1f] group-hover:text-[#6b3a2a]"}
-                          transition-colors duration-150
-                        `}
-                      >
-                        {item.label}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
+            {/* Shop  */}
+            <Link
+              href="/search"
+              onClick={onClose}
+              className="flex w-full items-center justify-between border-b border-[#f5ede4] py-4 group"
+            >
+              <span className="font-['DM_Sans',sans-serif] text-[22px] font-[400] leading-[30px] text-[#3d2b1f] group-hover:text-[#6b3a2a] transition-colors duration-150">
+                Shop
+              </span>
+            </Link>
 
             {/* Collections */}
             <Link
@@ -203,47 +143,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
               className="flex w-full items-center justify-between border-b border-[#f5ede4] py-4 group"
             >
               <span className="font-['DM_Sans',sans-serif] text-[22px] font-[400] leading-[30px] text-[#3d2b1f] group-hover:text-[#6b3a2a] transition-colors duration-150">
-                Collections
-              </span>
-            </Link>
-
-            {/* Best Sellers */}
-            <Link
-              href="/products?sort=best-sellers"
-              onClick={onClose}
-              className="flex w-full items-center justify-between border-b border-[#f5ede4] py-4 group"
-            >
-              <div className="flex items-center gap-3">
-                <span className="font-['DM_Sans',sans-serif] text-[22px] font-[400] leading-[30px] text-[#3d2b1f] group-hover:text-[#6b3a2a] transition-colors duration-150">
-                  Best Sellers
-                </span>
-                <div className="flex h-5 items-center rounded-full bg-[#6b3a2a] px-2">
-                  <span className="font-['DM_Sans',sans-serif] text-[10px] font-[600] leading-[14px] tracking-wider text-white uppercase">
-                    Hot
-                  </span>
-                </div>
-              </div>
-            </Link>
-
-            {/* About Us */}
-            <Link
-              href="/about"
-              onClick={onClose}
-              className="flex w-full items-center justify-between border-b border-[#f5ede4] py-4 group"
-            >
-              <span className="font-['DM_Sans',sans-serif] text-[22px] font-[400] leading-[30px] text-[#3d2b1f] group-hover:text-[#6b3a2a] transition-colors duration-150">
-                About Us
-              </span>
-            </Link>
-
-            {/* Contact */}
-            <Link
-              href="/contact"
-              onClick={onClose}
-              className="flex w-full items-center justify-between border-b border-[#f5ede4] py-4 group"
-            >
-              <span className="font-['DM_Sans',sans-serif] text-[22px] font-[400] leading-[30px] text-[#3d2b1f] group-hover:text-[#6b3a2a] transition-colors duration-150">
-                Contact
+                Collection
               </span>
             </Link>
           </nav>
